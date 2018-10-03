@@ -1,25 +1,75 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import React, { Component } from "react";
+import "./App.css";
+import Table from "./components/table";
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      tableData: {
+        columns: ["Service", "Cost/Unit", "Unit", "Units Requested"],
+        rows: [
+          {
+            Service: "Veterinary Assitance",
+            "Cost/Unit": 50,
+            Unit: "1 Hour",
+            "Units Requested": 12
+          },
+          {
+            Service: "Veterinary Assitance",
+            "Cost/Unit": 50,
+            Unit: "1 Hour",
+            "Units Requested": 12
+          } //, {
+          //   'Service': 'Veterinary Assitance',
+          //   'Cost/Unit': 50,
+          //   'Unit': '1 Hour',
+          //   'Units Requested': 12
+          // }, {
+          //   'Service': 'Veterinary Assitance',
+          //   'Cost/Unit': 50,
+          //   'Unit': '1 Hour',
+          //   'Units Requested': 12
+          // }, {
+          //   'Service': 'Veterinary Assitance',
+          //   'Cost/Unit': 50,
+          //   'Unit': '1 Hour',
+          //   'Units Requested': 12
+          // }, {
+          //   'Service': 'Veterinary Assitance',
+          //   'Cost/Unit': 50,
+          //   'Unit': '1 Hour',
+          //   'Units Requested': 12
+          // }, {
+          //   'Service': 'Veterinary Assitance',
+          //   'Cost/Unit': 50,
+          //   'Unit': '1 Hour',
+          //   'Units Requested': 12
+          // }, {
+          //   'Service': 'Veterinary Assitance',
+          //   'Cost/Unit': 50,
+          //   'Unit': '1 Hour',
+          //   'Units Requested': 12
+          // }, {
+          //   'Service': 'Veterinary Assitance',
+          //   'Cost/Unit': 50,
+          //   'Unit': '1 Hour',
+          //   'Units Requested': 12
+          // }, {
+          //   'Service': 'foo',
+          //   'Unit': null,
+          //   'Cost/Unit': undefined,
+          //   'Units Requested': 42
+          //}
+        ]
+      }
+    };
+  }
+
   render() {
+    // console.log(this.state.tableData.columns[0]);
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Table data={this.state.tableData} />
       </div>
     );
   }
