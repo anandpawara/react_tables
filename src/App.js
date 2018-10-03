@@ -66,11 +66,10 @@ class App extends Component {
   }
 
   render() {
-    // console.log(this.state.tableData.columns[0]);
+    // console.log(this.state.tableData.rows);
     return (
       <div className="App">
         <Table data={this.state.tableData} />
-        <h1>Hello World</h1>
       </div>
     );
   }
