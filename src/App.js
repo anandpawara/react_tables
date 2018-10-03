@@ -70,6 +70,7 @@ class App extends Component {
     return (
       <div className="App">
         <Table data={this.state.tableData} />
+        <h1>Hello World</h1>
       </div>
     );
   }
